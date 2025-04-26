@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0096)https://web-sandbox.oaiusercontent.com/index.html?sessionId=d8da6c5b-b6a9-40cb-ba08-2c5976ebb417 -->
+<html lang="en" data-ready=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script src="./3.4.16"></script>
+  <script>
+    tailwind.config = {"theme":{"extend":{"keyframes":{"accordion-down":{"from":{"height":"0"},"to":{"height":"var(--radix-accordion-content-height)"}},"accordion-up":{"from":{"height":"var(--radix-accordion-content-height)"},"to":{"height":"0"}}},"animation":{"accordion-down":"accordion-down 0.2s ease-out","accordion-up":"accordion-up 0.2s ease-out"},"colors":{"border":"hsl(var(--border))","input":"hsl(var(--input))","ring":"hsl(var(--ring))","background":"hsl(var(--background))","foreground":"hsl(var(--foreground))","primary":{"DEFAULT":"hsl(var(--primary))","foreground":"hsl(var(--primary-foreground))"},"secondary":{"DEFAULT":"hsl(var(--secondary))","foreground":"hsl(var(--secondary-foreground))"},"destructive":{"DEFAULT":"hsl(var(--destructive))","foreground":"hsl(var(--destructive-foreground))"},"muted":{"DEFAULT":"hsl(var(--muted))","foreground":"hsl(var(--muted-foreground))"},"accent":{"DEFAULT":"hsl(var(--accent))","foreground":"hsl(var(--accent-foreground))"},"popover":{"DEFAULT":"hsl(var(--popover))","foreground":"hsl(var(--popover-foreground))"},"card":{"DEFAULT":"hsl(var(--card))","foreground":"hsl(var(--card-foreground))"}},"borderRadius":{"lg":"var(--radius)","md":"calc(var(--radius) - 2px)","sm":"calc(var(--radius) - 4px)"},"sidebar":{"DEFAULT":"hsl(var(--sidebar-background))","foreground":"hsl(var(--sidebar-foreground))","primary":"hsl(var(--sidebar-primary))","primary-foreground":"hsl(var(--sidebar-primary-foreground))","accent":"hsl(var(--sidebar-accent))","accent-foreground":"hsl(var(--sidebar-accent-foreground))","border":"hsl(var(--sidebar-border))","ring":"hsl(var(--sidebar-ring))"}}}};
+  </script>
+  <style>/*
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 215 20.2% 65.1%;
+  --radius: 0.5rem;
+  /* For https://ui.shadcn.com/docs/components/chart */
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  /* For https://ui.shadcn.com/docs/components/sidebar */
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.animate-none {
+  animation: none;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.delay-0 {
+  transition-delay: 0s;
+}
+
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-1000 {
+  transition-delay: 1000ms;
+}
+
+.delay-150 {
+  transition-delay: 150ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.delay-500 {
+  transition-delay: 500ms;
+}
+
+.delay-700 {
+  transition-delay: 700ms;
+}
+
+.delay-75 {
+  transition-delay: 75ms;
+}
+
+.duration-0 {
+  transition-duration: 0s;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear {
+  transition-timing-function: linear;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.animate-in {
+  animation-name: enter;
+  animation-duration: 150ms;
+  --tw-enter-opacity: initial;
+  --tw-enter-scale: initial;
+  --tw-enter-rotate: initial;
+  --tw-enter-translate-x: initial;
+  --tw-enter-translate-y: initial;
+}
+
+.animate-out {
+  animation-name: exit;
+  animation-duration: 150ms;
+  --tw-exit-opacity: initial;
+  --tw-exit-scale: initial;
+  --tw-exit-rotate: initial;
+  --tw-exit-translate-x: initial;
+  --tw-exit-translate-y: initial;
+}
+
+.fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+
+.fade-in-10 {
+  --tw-enter-opacity: 0.1;
+}
+
+.fade-in-100 {
+  --tw-enter-opacity: 1;
+}
+
+.fade-in-15 {
+  --tw-enter-opacity: 0.15;
+}
+
+.fade-in-20 {
+  --tw-enter-opacity: 0.2;
+}
+
+.fade-in-25 {
+  --tw-enter-opacity: 0.25;
+}
+
+.fade-in-30 {
+  --tw-enter-opacity: 0.3;
+}
+
+.fade-in-35 {
+  --tw-enter-opacity: 0.35;
+}
+
+.fade-in-40 {
+  --tw-enter-opacity: 0.4;
+}
+
+.fade-in-45 {
+  --tw-enter-opacity: 0.45;
+}
+
+.fade-in-5 {
+  --tw-enter-opacity: 0.05;
+}
+
+.fade-in-50 {
+  --tw-enter-opacity: 0.5;
+}
+
+.fade-in-55 {
+  --tw-enter-opacity: 0.55;
+}
+
+.fade-in-60 {
+  --tw-enter-opacity: 0.6;
+}
+
+.fade-in-65 {
+  --tw-enter-opacity: 0.65;
+}
+
+.fade-in-70 {
+  --tw-enter-opacity: 0.7;
+}
+
+.fade-in-75 {
+  --tw-enter-opacity: 0.75;
+}
+
+.fade-in-80 {
+  --tw-enter-opacity: 0.8;
+}
+
+.fade-in-85 {
+  --tw-enter-opacity: 0.85;
+}
+
+.fade-in-90 {
+  --tw-enter-opacity: 0.9;
+}
+
+.fade-in-95 {
+  --tw-enter-opacity: 0.95;
+}
+
+.fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+
+.fade-out-10 {
+  --tw-exit-opacity: 0.1;
+}
+
+.fade-out-100 {
+  --tw-exit-opacity: 1;
+}
+
+.fade-out-15 {
+  --tw-exit-opacity: 0.15;
+}
+
+.fade-out-20 {
+  --tw-exit-opacity: 0.2;
+}
+
+.fade-out-25 {
+  --tw-exit-opacity: 0.25;
+}
+
+.fade-out-30 {
+  --tw-exit-opacity: 0.3;
+}
+
+.fade-out-35 {
+  --tw-exit-opacity: 0.35;
+}
+
+.fade-out-40 {
+  --tw-exit-opacity: 0.4;
+}
+
+.fade-out-45 {
+  --tw-exit-opacity: 0.45;
+}
+
+.fade-out-5 {
+  --tw-exit-opacity: 0.05;
+}
+
+.fade-out-50 {
+  --tw-exit-opacity: 0.5;
+}
+
+.fade-out-55 {
+  --tw-exit-opacity: 0.55;
+}
+
+.fade-out-60 {
+  --tw-exit-opacity: 0.6;
+}
+
+.fade-out-65 {
+  --tw-exit-opacity: 0.65;
+}
+
+.fade-out-70 {
+  --tw-exit-opacity: 0.7;
+}
+
+.fade-out-75 {
+  --tw-exit-opacity: 0.75;
+}
+
+.fade-out-80 {
+  --tw-exit-opacity: 0.8;
+}
+
+.fade-out-85 {
+  --tw-exit-opacity: 0.85;
+}
+
+.fade-out-90 {
+  --tw-exit-opacity: 0.9;
+}
+
+.fade-out-95 {
+  --tw-exit-opacity: 0.95;
+}
+
+.zoom-in-0 {
+  --tw-enter-scale: 0;
+}
+
+.zoom-in-100 {
+  --tw-enter-scale: 1;
+}
+
+.zoom-in-105 {
+  --tw-enter-scale: 1.05;
+}
+
+.zoom-in-110 {
+  --tw-enter-scale: 1.1;
+}
+
+.zoom-in-125 {
+  --tw-enter-scale: 1.25;
+}
+
+.zoom-in-150 {
+  --tw-enter-scale: 1.5;
+}
+
+.zoom-in-50 {
+  --tw-enter-scale: .5;
+}
+
+.zoom-in-75 {
+  --tw-enter-scale: .75;
+}
+
+.zoom-in-90 {
+  --tw-enter-scale: .9;
+}
+
+.zoom-in-95 {
+  --tw-enter-scale: .95;
+}
+
+.zoom-out-0 {
+  --tw-exit-scale: 0;
+}
+
+.zoom-out-100 {
+  --tw-exit-scale: 1;
+}
+
+.zoom-out-105 {
+  --tw-exit-scale: 1.05;
+}
+
+.zoom-out-110 {
+  --tw-exit-scale: 1.1;
+}
+
+.zoom-out-125 {
+  --tw-exit-scale: 1.25;
+}
+
+.zoom-out-150 {
+  --tw-exit-scale: 1.5;
+}
+
+.zoom-out-50 {
+  --tw-exit-scale: .5;
+}
+
+.zoom-out-75 {
+  --tw-exit-scale: .75;
+}
+
+.zoom-out-90 {
+  --tw-exit-scale: .9;
+}
+
+.zoom-out-95 {
+  --tw-exit-scale: .95;
+}
+
+.spin-in-0 {
+  --tw-enter-rotate: 0deg;
+}
+
+.spin-in-1 {
+  --tw-enter-rotate: 1deg;
+}
+
+.spin-in-12 {
+  --tw-enter-rotate: 12deg;
+}
+
+.spin-in-180 {
+  --tw-enter-rotate: 180deg;
+}
+
+.spin-in-2 {
+  --tw-enter-rotate: 2deg;
+}
+
+.spin-in-3 {
+  --tw-enter-rotate: 3deg;
+}
+
+.spin-in-45 {
+  --tw-enter-rotate: 45deg;
+}
+
+.spin-in-6 {
+  --tw-enter-rotate: 6deg;
+}
+
+.spin-in-90 {
+  --tw-enter-rotate: 90deg;
+}
+
+.spin-out-0 {
+  --tw-exit-rotate: 0deg;
+}
+
+.spin-out-1 {
+  --tw-exit-rotate: 1deg;
+}
+
+.spin-out-12 {
+  --tw-exit-rotate: 12deg;
+}
+
+.spin-out-180 {
+  --tw-exit-rotate: 180deg;
+}
+
+.spin-out-2 {
+  --tw-exit-rotate: 2deg;
+}
+
+.spin-out-3 {
+  --tw-exit-rotate: 3deg;
+}
+
+.spin-out-45 {
+  --tw-exit-rotate: 45deg;
+}
+
+.spin-out-6 {
+  --tw-exit-rotate: 6deg;
+}
+
+.spin-out-90 {
+  --tw-exit-rotate: 90deg;
+}
+
+.slide-in-from-bottom {
+  --tw-enter-translate-y: 100%;
+}
+
+.slide-in-from-bottom-0 {
+  --tw-enter-translate-y: 0px;
+}
+
+.slide-in-from-bottom-0.5 {
+  --tw-enter-translate-y: 0.125rem;
+}
+
+.slide-in-from-bottom-1 {
+  --tw-enter-translate-y: 0.25rem;
+}
+
+.slide-in-from-bottom-1.5 {
+  --tw-enter-translate-y: 0.375rem;
+}
+
+.slide-in-from-bottom-1/2 {
+  --tw-enter-translate-y: 50%;
+}
+
+.slide-in-from-bottom-1/3 {
+  --tw-enter-translate-y: 33.333333%;
+}
+
+.slide-in-from-bottom-1/4 {
+  --tw-enter-translate-y: 25%;
+}
+
+.slide-in-from-bottom-10 {
+  --tw-enter-translate-y: 2.5rem;
+}
+
+.slide-in-from-bottom-11 {
+  --tw-enter-translate-y: 2.75rem;
+}
+
+.slide-in-from-bottom-12 {
+  --tw-enter-translate-y: 3rem;
+}
+
+.slide-in-from-bottom-14 {
+  --tw-enter-translate-y: 3.5rem;
+}
+
+.slide-in-from-bottom-16 {
+  --tw-enter-translate-y: 4rem;
+}
+
+.slide-in-from-bottom-2 {
+  --tw-enter-translate-y: 0.5rem;
+}
+
+.slide-in-from-bottom-2.5 {
+  --tw-enter-translate-y: 0.625rem;
+}
+
+.slide-in-from-bottom-2/3 {
+  --tw-enter-translate-y: 66.666667%;
+}
+
+.slide-in-from-bottom-2/4 {
+  --tw-enter-translate-y: 50%;
+}
+
+.slide-in-from-bottom-20 {
+  --tw-enter-translate-y: 5rem;
+}
+
+.slide-in-from-bottom-24 {
+  --tw-enter-translate-y: 6rem;
+}
+
+.slide-in-from-bottom-28 {
+  --tw-enter-translate-y: 7rem;
+}
+
+.slide-in-from-bottom-3 {
+  --tw-enter-translate-y: 0.75rem;
+}
+
+.slide-in-from-bottom-3.5 {
+  --tw-enter-translate-y: 0.875rem;
+}
+
+.slide-in-from-bottom-3/4 {
+  --tw-enter-translate-y: 75%;
+}
+
+.slide-in-from-bottom-32 {
+  --tw-enter-translate-y: 8rem;
+}
+
+.slide-in-from-bottom-36 {
+  --tw-enter-translate-y: 9rem;
+}
+
+.slide-in-from-bottom-4 {
+  --tw-enter-translate-y: 1rem;
+}
+
+.slide-in-from-bottom-40 {
+  --tw-enter-translate-y: 10rem;
+}
+
+.slide-in-from-bottom-44 {
+  --tw-enter-translate-y: 11rem;
+}
+
+.slide-in-from-bottom-48 {
+  --tw-enter-translate-y: 12rem;
+}
+
+.slide-in-from-bottom-5 {
+  --tw-enter-translate-y: 1.25rem;
+}
+
+.slide-in-from-bottom-52 {
+  --tw-enter-translate-y: 13rem;
+}
+
+.slide-in-from-bottom-56 {
+  --tw-enter-translate-y: 14rem;
+}
+
+.slide-in-from-bottom-6 {
+  --tw-enter-translate-y: 1.5rem;
+}
+
+.slide-in-from-bottom-60 {
+  --tw-enter-translate-y: 15rem;
+}
+
+.slide-in-from-bottom-64 {
+  --tw-enter-translate-y: 16rem;
+}
+
+.slide-in-from-bottom-7 {
+  --tw-enter-translate-y: 1.75rem;
+}
+
+.slide-in-from-bottom-72 {
+  --tw-enter-translate-y: 18rem;
+}
+
+.slide-in-from-bottom-8 {
+  --tw-enter-translate-y: 2rem;
+}
+
+.slide-in-from-bottom-80 {
+  --tw-enter-translate-y: 20rem;
+}
+
+.slide-in-from-bottom-9 {
+  --tw-enter-translate-y: 2.25rem;
+}
+
+.slide-in-from-bottom-96 {
+  --tw-enter-translate-y: 24rem;
+}
+
+.slide-in-from-bottom-full {
+  --tw-enter-translate-y: 100%;
+}
+
+.slide-in-from-bottom-px {
+  --tw-enter-translate-y: 1px;
+}
+
+.slide-in-from-left {
+  --tw-enter-translate-x: -100%;
+}
+
+.slide-in-from-left-0 {
+  --tw-enter-translate-x: -0px;
+}
+
+.slide-in-from-left-0.5 {
+  --tw-enter-translate-x: -0.125rem;
+}
+
+.slide-in-from-left-1 {
+  --tw-enter-translate-x: -0.25rem;
+}
+
+.slide-in-from-left-1.5 {
+  --tw-enter-translate-x: -0.375rem;
+}
+
+.slide-in-from-left-1/2 {
+  --tw-enter-translate-x: -50%;
+}
+
+.slide-in-from-left-1/3 {
+  --tw-enter-translate-x: -33.333333%;
+}
+
+.slide-in-from-left-1/4 {
+  --tw-enter-translate-x: -25%;
+}
+
+.slide-in-from-left-10 {
+  --tw-enter-translate-x: -2.5rem;
+}
+
+.slide-in-from-left-11 {
+  --tw-enter-translate-x: -2.75rem;
+}
+
+.slide-in-from-left-12 {
+  --tw-enter-translate-x: -3rem;
+}
+
+.slide-in-from-left-14 {
+  --tw-enter-translate-x: -3.5rem;
+}
+
+.slide-in-from-left-16 {
+  --tw-enter-translate-x: -4rem;
+}
+
+.slide-in-from-left-2 {
+  --tw-enter-translate-x: -0.5rem;
+}
+
+.slide-in-from-left-2.5 {
+  --tw-enter-translate-x: -0.625rem;
+}
+
+.slide-in-from-left-2/3 {
+  --tw-enter-translate-x: -66.666667%;
+}
+
+.slide-in-from-left-2/4 {
+  --tw-enter-translate-x: -50%;
+}
+
+.slide-in-from-left-20 {
+  --tw-enter-translate-x: -5rem;
+}
+
+.slide-in-from-left-24 {
+  --tw-enter-translate-x: -6rem;
+}
+
+.slide-in-from-left-28 {
+  --tw-enter-translate-x: -7rem;
+}
+
+.slide-in-from-left-3 {
+  --tw-enter-translate-x: -0.75rem;
+}
+
+.slide-in-from-left-3.5 {
+  --tw-enter-translate-x: -0.875rem;
+}
+
+.slide-in-from-left-3/4 {
+  --tw-enter-translate-x: -75%;
+}
+
+.slide-in-from-left-32 {
+  --tw-enter-translate-x: -8rem;
+}
+
+.slide-in-from-left-36 {
+  --tw-enter-translate-x: -9rem;
+}
+
+.slide-in-from-left-4 {
+  --tw-enter-translate-x: -1rem;
+}
+
+.slide-in-from-left-40 {
+  --tw-enter-translate-x: -10rem;
+}
+
+.slide-in-from-left-44 {
+  --tw-enter-translate-x: -11rem;
+}
+
+.slide-in-from-left-48 {
+  --tw-enter-translate-x: -12rem;
+}
+
+.slide-in-from-left-5 {
+  --tw-enter-translate-x: -1.25rem;
+}
+
+.slide-in-from-left-52 {
+  --tw-enter-translate-x: -13rem;
+}
+
+.slide-in-from-left-56 {
+  --tw-enter-translate-x: -14rem;
+}
+
+.slide-in-from-left-6 {
+  --tw-enter-translate-x: -1.5rem;
+}
+
+.slide-in-from-left-60 {
+  --tw-enter-translate-x: -15rem;
+}
+
+.slide-in-from-left-64 {
+  --tw-enter-translate-x: -16rem;
+}
+
+.slide-in-from-left-7 {
+  --tw-enter-translate-x: -1.75rem;
+}
+
+.slide-in-from-left-72 {
+  --tw-enter-translate-x: -18rem;
+}
+
+.slide-in-from-left-8 {
+  --tw-enter-translate-x: -2rem;
+}
+
+.slide-in-from-left-80 {
+  --tw-enter-translate-x: -20rem;
+}
+
+.slide-in-from-left-9 {
+  --tw-enter-translate-x: -2.25rem;
+}
+
+.slide-in-from-left-96 {
+  --tw-enter-translate-x: -24rem;
+}
+
+.slide-in-from-left-full {
+  --tw-enter-translate-x: -100%;
+}
+
+.slide-in-from-left-px {
+  --tw-enter-translate-x: -1px;
+}
+
+.slide-in-from-right {
+  --tw-enter-translate-x: 100%;
+}
+
+.slide-in-from-right-0 {
+  --tw-enter-translate-x: 0px;
+}
+
+.slide-in-from-right-0.5 {
+  --tw-enter-translate-x: 0.125rem;
+}
+
+.slide-in-from-right-1 {
+  --tw-enter-translate-x: 0.25rem;
+}
+
+.slide-in-from-right-1.5 {
+  --tw-enter-translate-x: 0.375rem;
+}
+
+.slide-in-from-right-1/2 {
+  --tw-enter-translate-x: 50%;
+}
+
+.slide-in-from-right-1/3 {
+  --tw-enter-translate-x: 33.333333%;
+}
+
+.slide-in-from-right-1/4 {
+  --tw-enter-translate-x: 25%;
+}
+
+.slide-in-from-right-10 {
+  --tw-enter-translate-x: 2.5rem;
+}
+
+.slide-in-from-right-11 {
+  --tw-enter-translate-x: 2.75rem;
+}
+
+.slide-in-from-right-12 {
+  --tw-enter-translate-x: 3rem;
+}
+
+.slide-in-from-right-14 {
+  --tw-enter-translate-x: 3.5rem;
+}
+
+.slide-in-from-right-16 {
+  --tw-enter-translate-x: 4rem;
+}
+
+.slide-in-from-right-2 {
+  --tw-enter-translate-x: 0.5rem;
+}
+
+.slide-in-from-right-2.5 {
+  --tw-enter-translate-x: 0.625rem;
+}
+
+.slide-in-from-right-2/3 {
+  --tw-enter-translate-x: 66.666667%;
+}
+
+.slide-in-from-right-2/4 {
+  --tw-enter-translate-x: 50%;
+}
+
+.slide-in-from-right-20 {
+  --tw-enter-translate-x: 5rem;
+}
+
+.slide-in-from-right-24 {
+  --tw-enter-translate-x: 6rem;
+}
+
+.slide-in-from-right-28 {
+  --tw-enter-translate-x: 7rem;
+}
+
+.slide-in-from-right-3 {
+  --tw-enter-translate-x: 0.75rem;
+}
+
+.slide-in-from-right-3.5 {
+  --tw-enter-translate-x: 0.875rem;
+}
+
+.slide-in-from-right-3/4 {
+  --tw-enter-translate-x: 75%;
+}
+
+.slide-in-from-right-32 {
+  --tw-enter-translate-x: 8rem;
+}
+
+.slide-in-from-right-36 {
+  --tw-enter-translate-x: 9rem;
+}
+
+.slide-in-from-right-4 {
+  --tw-enter-translate-x: 1rem;
+}
+
+.slide-in-from-right-40 {
+  --tw-enter-translate-x: 10rem;
+}
+
+.slide-in-from-right-44 {
+  --tw-enter-translate-x: 11rem;
+}
+
+.slide-in-from-right-48 {
+  --tw-enter-translate-x: 12rem;
+}
+
+.slide-in-from-right-5 {
+  --tw-enter-translate-x: 1.25rem;
+}
+
+.slide-in-from-right-52 {
+  --tw-enter-translate-x: 13rem;
+}
+
+.slide-in-from-right-56 {
+  --tw-enter-translate-x: 14rem;
+}
+
+.slide-in-from-right-6 {
+  --tw-enter-translate-x: 1.5rem;
+}
+
+.slide-in-from-right-60 {
+  --tw-enter-translate-x: 15rem;
+}
+
+.slide-in-from-right-64 {
+  --tw-enter-translate-x: 16rem;
+}
+
+.slide-in-from-right-7 {
+  --tw-enter-translate-x: 1.75rem;
+}
+
+.slide-in-from-right-72 {
+  --tw-enter-translate-x: 18rem;
+}
+
+.slide-in-from-right-8 {
+  --tw-enter-translate-x: 2rem;
+}
+
+.slide-in-from-right-80 {
+  --tw-enter-translate-x: 20rem;
+}
+
+.slide-in-from-right-9 {
+  --tw-enter-translate-x: 2.25rem;
+}
+
+.slide-in-from-right-96 {
+  --tw-enter-translate-x: 24rem;
+}
+
+.slide-in-from-right-full {
+  --tw-enter-translate-x: 100%;
+}
+
+.slide-in-from-right-px {
+  --tw-enter-translate-x: 1px;
+}
+
+.slide-in-from-top {
+  --tw-enter-translate-y: -100%;
+}
+
+.slide-in-from-top-0 {
+  --tw-enter-translate-y: -0px;
+}
+
+.slide-in-from-top-0.5 {
+  --tw-enter-translate-y: -0.125rem;
+}
+
+.slide-in-from-top-1 {
+  --tw-enter-translate-y: -0.25rem;
+}
+
+.slide-in-from-top-1.5 {
+  --tw-enter-translate-y: -0.375rem;
+}
+
+.slide-in-from-top-1/2 {
+  --tw-enter-translate-y: -50%;
+}
+
+.slide-in-from-top-1/3 {
+  --tw-enter-translate-y: -33.333333%;
+}
+
+.slide-in-from-top-1/4 {
+  --tw-enter-translate-y: -25%;
+}
+
+.slide-in-from-top-10 {
+  --tw-enter-translate-y: -2.5rem;
+}
+
+.slide-in-from-top-11 {
+  --tw-enter-translate-y: -2.75rem;
+}
+
+.slide-in-from-top-12 {
+  --tw-enter-translate-y: -3rem;
+}
+
+.slide-in-from-top-14 {
+  --tw-enter-translate-y: -3.5rem;
+}
+
+.slide-in-from-top-16 {
+  --tw-enter-translate-y: -4rem;
+}
+
+.slide-in-from-top-2 {
+  --tw-enter-translate-y: -0.5rem;
+}
+
+.slide-in-from-top-2.5 {
+  --tw-enter-translate-y: -0.625rem;
+}
+
+.slide-in-from-top-2/3 {
+  --tw-enter-translate-y: -66.666667%;
+}
+
+.slide-in-from-top-2/4 {
+  --tw-enter-translate-y: -50%;
+}
+
+.slide-in-from-top-20 {
+  --tw-enter-translate-y: -5rem;
+}
+
+.slide-in-from-top-24 {
+  --tw-enter-translate-y: -6rem;
+}
+
+.slide-in-from-top-28 {
+  --tw-enter-translate-y: -7rem;
+}
+
+.slide-in-from-top-3 {
+  --tw-enter-translate-y: -0.75rem;
+}
+
+.slide-in-from-top-3.5 {
+  --tw-enter-translate-y: -0.875rem;
+}
+
+.slide-in-from-top-3/4 {
+  --tw-enter-translate-y: -75%;
+}
+
+.slide-in-from-top-32 {
+  --tw-enter-translate-y: -8rem;
+}
+
+.slide-in-from-top-36 {
+  --tw-enter-translate-y: -9rem;
+}
+
+.slide-in-from-top-4 {
+  --tw-enter-translate-y: -1rem;
+}
+
+.slide-in-from-top-40 {
+  --tw-enter-translate-y: -10rem;
+}
+
+.slide-in-from-top-44 {
+  --tw-enter-translate-y: -11rem;
+}
+
+.slide-in-from-top-48 {
+  --tw-enter-translate-y: -12rem;
+}
+
+.slide-in-from-top-5 {
+  --tw-enter-translate-y: -1.25rem;
+}
+
+.slide-in-from-top-52 {
+  --tw-enter-translate-y: -13rem;
+}
+
+.slide-in-from-top-56 {
+  --tw-enter-translate-y: -14rem;
+}
+
+.slide-in-from-top-6 {
+  --tw-enter-translate-y: -1.5rem;
+}
+
+.slide-in-from-top-60 {
+  --tw-enter-translate-y: -15rem;
+}
+
+.slide-in-from-top-64 {
+  --tw-enter-translate-y: -16rem;
+}
+
+.slide-in-from-top-7 {
+  --tw-enter-translate-y: -1.75rem;
+}
+
+.slide-in-from-top-72 {
+  --tw-enter-translate-y: -18rem;
+}
+
+.slide-in-from-top-8 {
+  --tw-enter-translate-y: -2rem;
+}
+
+.slide-in-from-top-80 {
+  --tw-enter-translate-y: -20rem;
+}
+
+.slide-in-from-top-9 {
+  --tw-enter-translate-y: -2.25rem;
+}
+
+.slide-in-from-top-96 {
+  --tw-enter-translate-y: -24rem;
+}
+
+.slide-in-from-top-full {
+  --tw-enter-translate-y: -100%;
+}
+
+.slide-in-from-top-px {
+  --tw-enter-translate-y: -1px;
+}
+
+.slide-out-to-bottom {
+  --tw-exit-translate-y: 100%;
+}
+
+.slide-out-to-bottom-0 {
+  --tw-exit-translate-y: 0px;
+}
+
+.slide-out-to-bottom-0.5 {
+  --tw-exit-translate-y: 0.125rem;
+}
+
+.slide-out-to-bottom-1 {
+  --tw-exit-translate-y: 0.25rem;
+}
+
+.slide-out-to-bottom-1.5 {
+  --tw-exit-translate-y: 0.375rem;
+}
+
+.slide-out-to-bottom-1/2 {
+  --tw-exit-translate-y: 50%;
+}
+
+.slide-out-to-bottom-1/3 {
+  --tw-exit-translate-y: 33.333333%;
+}
+
+.slide-out-to-bottom-1/4 {
+  --tw-exit-translate-y: 25%;
+}
+
+.slide-out-to-bottom-10 {
+  --tw-exit-translate-y: 2.5rem;
+}
+
+.slide-out-to-bottom-11 {
+  --tw-exit-translate-y: 2.75rem;
+}
+
+.slide-out-to-bottom-12 {
+  --tw-exit-translate-y: 3rem;
+}
+
+.slide-out-to-bottom-14 {
+  --tw-exit-translate-y: 3.5rem;
+}
+
+.slide-out-to-bottom-16 {
+  --tw-exit-translate-y: 4rem;
+}
+
+.slide-out-to-bottom-2 {
+  --tw-exit-translate-y: 0.5rem;
+}
+
+.slide-out-to-bottom-2.5 {
+  --tw-exit-translate-y: 0.625rem;
+}
+
+.slide-out-to-bottom-2/3 {
+  --tw-exit-translate-y: 66.666667%;
+}
+
+.slide-out-to-bottom-2/4 {
+  --tw-exit-translate-y: 50%;
+}
+
+.slide-out-to-bottom-20 {
+  --tw-exit-translate-y: 5rem;
+}
+
+.slide-out-to-bottom-24 {
+  --tw-exit-translate-y: 6rem;
+}
+
+.slide-out-to-bottom-28 {
+  --tw-exit-translate-y: 7rem;
+}
+
+.slide-out-to-bottom-3 {
+  --tw-exit-translate-y: 0.75rem;
+}
+
+.slide-out-to-bottom-3.5 {
+  --tw-exit-translate-y: 0.875rem;
+}
+
+.slide-out-to-bottom-3/4 {
+  --tw-exit-translate-y: 75%;
+}
+
+.slide-out-to-bottom-32 {
+  --tw-exit-translate-y: 8rem;
+}
+
+.slide-out-to-bottom-36 {
+  --tw-exit-translate-y: 9rem;
+}
+
+.slide-out-to-bottom-4 {
+  --tw-exit-translate-y: 1rem;
+}
+
+.slide-out-to-bottom-40 {
+  --tw-exit-translate-y: 10rem;
+}
+
+.slide-out-to-bottom-44 {
+  --tw-exit-translate-y: 11rem;
+}
+
+.slide-out-to-bottom-48 {
+  --tw-exit-translate-y: 12rem;
+}
+
+.slide-out-to-bottom-5 {
+  --tw-exit-translate-y: 1.25rem;
+}
+
+.slide-out-to-bottom-52 {
+  --tw-exit-translate-y: 13rem;
+}
+
+.slide-out-to-bottom-56 {
+  --tw-exit-translate-y: 14rem;
+}
+
+.slide-out-to-bottom-6 {
+  --tw-exit-translate-y: 1.5rem;
+}
+
+.slide-out-to-bottom-60 {
+  --tw-exit-translate-y: 15rem;
+}
+
+.slide-out-to-bottom-64 {
+  --tw-exit-translate-y: 16rem;
+}
+
+.slide-out-to-bottom-7 {
+  --tw-exit-translate-y: 1.75rem;
+}
+
+.slide-out-to-bottom-72 {
+  --tw-exit-translate-y: 18rem;
+}
+
+.slide-out-to-bottom-8 {
+  --tw-exit-translate-y: 2rem;
+}
+
+.slide-out-to-bottom-80 {
+  --tw-exit-translate-y: 20rem;
+}
+
+.slide-out-to-bottom-9 {
+  --tw-exit-translate-y: 2.25rem;
+}
+
+.slide-out-to-bottom-96 {
+  --tw-exit-translate-y: 24rem;
+}
+
+.slide-out-to-bottom-full {
+  --tw-exit-translate-y: 100%;
+}
+
+.slide-out-to-bottom-px {
+  --tw-exit-translate-y: 1px;
+}
+
+.slide-out-to-left {
+  --tw-exit-translate-x: -100%;
+}
+
+.slide-out-to-left-0 {
+  --tw-exit-translate-x: -0px;
+}
+
+.slide-out-to-left-0.5 {
+  --tw-exit-translate-x: -0.125rem;
+}
+
+.slide-out-to-left-1 {
+  --tw-exit-translate-x: -0.25rem;
+}
+
+.slide-out-to-left-1.5 {
+  --tw-exit-translate-x: -0.375rem;
+}
+
+.slide-out-to-left-1/2 {
+  --tw-exit-translate-x: -50%;
+}
+
+.slide-out-to-left-1/3 {
+  --tw-exit-translate-x: -33.333333%;
+}
+
+.slide-out-to-left-1/4 {
+  --tw-exit-translate-x: -25%;
+}
+
+.slide-out-to-left-10 {
+  --tw-exit-translate-x: -2.5rem;
+}
+
+.slide-out-to-left-11 {
+  --tw-exit-translate-x: -2.75rem;
+}
+
+.slide-out-to-left-12 {
+  --tw-exit-translate-x: -3rem;
+}
+
+.slide-out-to-left-14 {
+  --tw-exit-translate-x: -3.5rem;
+}
+
+.slide-out-to-left-16 {
+  --tw-exit-translate-x: -4rem;
+}
+
+.slide-out-to-left-2 {
+  --tw-exit-translate-x: -0.5rem;
+}
+
+.slide-out-to-left-2.5 {
+  --tw-exit-translate-x: -0.625rem;
+}
+
+.slide-out-to-left-2/3 {
+  --tw-exit-translate-x: -66.666667%;
+}
+
+.slide-out-to-left-2/4 {
+  --tw-exit-translate-x: -50%;
+}
+
+.slide-out-to-left-20 {
+  --tw-exit-translate-x: -5rem;
+}
+
+.slide-out-to-left-24 {
+  --tw-exit-translate-x: -6rem;
+}
+
+.slide-out-to-left-28 {
+  --tw-exit-translate-x: -7rem;
+}
+
+.slide-out-to-left-3 {
+  --tw-exit-translate-x: -0.75rem;
+}
+
+.slide-out-to-left-3.5 {
+  --tw-exit-translate-x: -0.875rem;
+}
+
+.slide-out-to-left-3/4 {
+  --tw-exit-translate-x: -75%;
+}
+
+.slide-out-to-left-32 {
+  --tw-exit-translate-x: -8rem;
+}
+
+.slide-out-to-left-36 {
+  --tw-exit-translate-x: -9rem;
+}
+
+.slide-out-to-left-4 {
+  --tw-exit-translate-x: -1rem;
+}
+
+.slide-out-to-left-40 {
+  --tw-exit-translate-x: -10rem;
+}
+
+.slide-out-to-left-44 {
+  --tw-exit-translate-x: -11rem;
+}
+
+.slide-out-to-left-48 {
+  --tw-exit-translate-x: -12rem;
+}
+
+.slide-out-to-left-5 {
+  --tw-exit-translate-x: -1.25rem;
+}
+
+.slide-out-to-left-52 {
+  --tw-exit-translate-x: -13rem;
+}
+
+.slide-out-to-left-56 {
+  --tw-exit-translate-x: -14rem;
+}
+
+.slide-out-to-left-6 {
+  --tw-exit-translate-x: -1.5rem;
+}
+
+.slide-out-to-left-60 {
+  --tw-exit-translate-x: -15rem;
+}
+
+.slide-out-to-left-64 {
+  --tw-exit-translate-x: -16rem;
+}
+
+.slide-out-to-left-7 {
+  --tw-exit-translate-x: -1.75rem;
+}
+
+.slide-out-to-left-72 {
+  --tw-exit-translate-x: -18rem;
+}
+
+.slide-out-to-left-8 {
+  --tw-exit-translate-x: -2rem;
+}
+
+.slide-out-to-left-80 {
+  --tw-exit-translate-x: -20rem;
+}
+
+.slide-out-to-left-9 {
+  --tw-exit-translate-x: -2.25rem;
+}
+
+.slide-out-to-left-96 {
+  --tw-exit-translate-x: -24rem;
+}
+
+.slide-out-to-left-full {
+  --tw-exit-translate-x: -100%;
+}
+
+.slide-out-to-left-px {
+  --tw-exit-translate-x: -1px;
+}
+
+.slide-out-to-right {
+  --tw-exit-translate-x: 100%;
+}
+
+.slide-out-to-right-0 {
+  --tw-exit-translate-x: 0px;
+}
+
+.slide-out-to-right-0.5 {
+  --tw-exit-translate-x: 0.125rem;
+}
+
+.slide-out-to-right-1 {
+  --tw-exit-translate-x: 0.25rem;
+}
+
+.slide-out-to-right-1.5 {
+  --tw-exit-translate-x: 0.375rem;
+}
+
+.slide-out-to-right-1/2 {
+  --tw-exit-translate-x: 50%;
+}
+
+.slide-out-to-right-1/3 {
+  --tw-exit-translate-x: 33.333333%;
+}
+
+.slide-out-to-right-1/4 {
+  --tw-exit-translate-x: 25%;
+}
+
+.slide-out-to-right-10 {
+  --tw-exit-translate-x: 2.5rem;
+}
+
+.slide-out-to-right-11 {
+  --tw-exit-translate-x: 2.75rem;
+}
+
+.slide-out-to-right-12 {
+  --tw-exit-translate-x: 3rem;
+}
+
+.slide-out-to-right-14 {
+  --tw-exit-translate-x: 3.5rem;
+}
+
+.slide-out-to-right-16 {
+  --tw-exit-translate-x: 4rem;
+}
+
+.slide-out-to-right-2 {
+  --tw-exit-translate-x: 0.5rem;
+}
+
+.slide-out-to-right-2.5 {
+  --tw-exit-translate-x: 0.625rem;
+}
+
+.slide-out-to-right-2/3 {
+  --tw-exit-translate-x: 66.666667%;
+}
+
+.slide-out-to-right-2/4 {
+  --tw-exit-translate-x: 50%;
+}
+
+.slide-out-to-right-20 {
+  --tw-exit-translate-x: 5rem;
+}
+
+.slide-out-to-right-24 {
+  --tw-exit-translate-x: 6rem;
+}
+
+.slide-out-to-right-28 {
+  --tw-exit-translate-x: 7rem;
+}
+
+.slide-out-to-right-3 {
+  --tw-exit-translate-x: 0.75rem;
+}
+
+.slide-out-to-right-3.5 {
+  --tw-exit-translate-x: 0.875rem;
+}
+
+.slide-out-to-right-3/4 {
+  --tw-exit-translate-x: 75%;
+}
+
+.slide-out-to-right-32 {
+  --tw-exit-translate-x: 8rem;
+}
+
+.slide-out-to-right-36 {
+  --tw-exit-translate-x: 9rem;
+}
+
+.slide-out-to-right-4 {
+  --tw-exit-translate-x: 1rem;
+}
+
+.slide-out-to-right-40 {
+  --tw-exit-translate-x: 10rem;
+}
+
+.slide-out-to-right-44 {
+  --tw-exit-translate-x: 11rem;
+}
+
+.slide-out-to-right-48 {
+  --tw-exit-translate-x: 12rem;
+}
+
+.slide-out-to-right-5 {
+  --tw-exit-translate-x: 1.25rem;
+}
+
+.slide-out-to-right-52 {
+  --tw-exit-translate-x: 13rem;
+}
+
+.slide-out-to-right-56 {
+  --tw-exit-translate-x: 14rem;
+}
+
+.slide-out-to-right-6 {
+  --tw-exit-translate-x: 1.5rem;
+}
+
+.slide-out-to-right-60 {
+  --tw-exit-translate-x: 15rem;
+}
+
+.slide-out-to-right-64 {
+  --tw-exit-translate-x: 16rem;
+}
+
+.slide-out-to-right-7 {
+  --tw-exit-translate-x: 1.75rem;
+}
+
+.slide-out-to-right-72 {
+  --tw-exit-translate-x: 18rem;
+}
+
+.slide-out-to-right-8 {
+  --tw-exit-translate-x: 2rem;
+}
+
+.slide-out-to-right-80 {
+  --tw-exit-translate-x: 20rem;
+}
+
+.slide-out-to-right-9 {
+  --tw-exit-translate-x: 2.25rem;
+}
+
+.slide-out-to-right-96 {
+  --tw-exit-translate-x: 24rem;
+}
+
+.slide-out-to-right-full {
+  --tw-exit-translate-x: 100%;
+}
+
+.slide-out-to-right-px {
+  --tw-exit-translate-x: 1px;
+}
+
+.slide-out-to-top {
+  --tw-exit-translate-y: -100%;
+}
+
+.slide-out-to-top-0 {
+  --tw-exit-translate-y: -0px;
+}
+
+.slide-out-to-top-0.5 {
+  --tw-exit-translate-y: -0.125rem;
+}
+
+.slide-out-to-top-1 {
+  --tw-exit-translate-y: -0.25rem;
+}
+
+.slide-out-to-top-1.5 {
+  --tw-exit-translate-y: -0.375rem;
+}
+
+.slide-out-to-top-1/2 {
+  --tw-exit-translate-y: -50%;
+}
+
+.slide-out-to-top-1/3 {
+  --tw-exit-translate-y: -33.333333%;
+}
+
+.slide-out-to-top-1/4 {
+  --tw-exit-translate-y: -25%;
+}
+
+.slide-out-to-top-10 {
+  --tw-exit-translate-y: -2.5rem;
+}
+
+.slide-out-to-top-11 {
+  --tw-exit-translate-y: -2.75rem;
+}
+
+.slide-out-to-top-12 {
+  --tw-exit-translate-y: -3rem;
+}
+
+.slide-out-to-top-14 {
+  --tw-exit-translate-y: -3.5rem;
+}
+
+.slide-out-to-top-16 {
+  --tw-exit-translate-y: -4rem;
+}
+
+.slide-out-to-top-2 {
+  --tw-exit-translate-y: -0.5rem;
+}
+
+.slide-out-to-top-2.5 {
+  --tw-exit-translate-y: -0.625rem;
+}
+
+.slide-out-to-top-2/3 {
+  --tw-exit-translate-y: -66.666667%;
+}
+
+.slide-out-to-top-2/4 {
+  --tw-exit-translate-y: -50%;
+}
+
+.slide-out-to-top-20 {
+  --tw-exit-translate-y: -5rem;
+}
+
+.slide-out-to-top-24 {
+  --tw-exit-translate-y: -6rem;
+}
+
+.slide-out-to-top-28 {
+  --tw-exit-translate-y: -7rem;
+}
+
+.slide-out-to-top-3 {
+  --tw-exit-translate-y: -0.75rem;
+}
+
+.slide-out-to-top-3.5 {
+  --tw-exit-translate-y: -0.875rem;
+}
+
+.slide-out-to-top-3/4 {
+  --tw-exit-translate-y: -75%;
+}
+
+.slide-out-to-top-32 {
+  --tw-exit-translate-y: -8rem;
+}
+
+.slide-out-to-top-36 {
+  --tw-exit-translate-y: -9rem;
+}
+
+.slide-out-to-top-4 {
+  --tw-exit-translate-y: -1rem;
+}
+
+.slide-out-to-top-40 {
+  --tw-exit-translate-y: -10rem;
+}
+
+.slide-out-to-top-44 {
+  --tw-exit-translate-y: -11rem;
+}
+
+.slide-out-to-top-48 {
+  --tw-exit-translate-y: -12rem;
+}
+
+.slide-out-to-top-5 {
+  --tw-exit-translate-y: -1.25rem;
+}
+
+.slide-out-to-top-52 {
+  --tw-exit-translate-y: -13rem;
+}
+
+.slide-out-to-top-56 {
+  --tw-exit-translate-y: -14rem;
+}
+
+.slide-out-to-top-6 {
+  --tw-exit-translate-y: -1.5rem;
+}
+
+.slide-out-to-top-60 {
+  --tw-exit-translate-y: -15rem;
+}
+
+.slide-out-to-top-64 {
+  --tw-exit-translate-y: -16rem;
+}
+
+.slide-out-to-top-7 {
+  --tw-exit-translate-y: -1.75rem;
+}
+
+.slide-out-to-top-72 {
+  --tw-exit-translate-y: -18rem;
+}
+
+.slide-out-to-top-8 {
+  --tw-exit-translate-y: -2rem;
+}
+
+.slide-out-to-top-80 {
+  --tw-exit-translate-y: -20rem;
+}
+
+.slide-out-to-top-9 {
+  --tw-exit-translate-y: -2.25rem;
+}
+
+.slide-out-to-top-96 {
+  --tw-exit-translate-y: -24rem;
+}
+
+.slide-out-to-top-full {
+  --tw-exit-translate-y: -100%;
+}
+
+.slide-out-to-top-px {
+  --tw-exit-translate-y: -1px;
+}
+
+.duration-0 {
+  animation-duration: 0s;
+}
+
+.duration-100 {
+  animation-duration: 100ms;
+}
+
+.duration-1000 {
+  animation-duration: 1000ms;
+}
+
+.duration-150 {
+  animation-duration: 150ms;
+}
+
+.duration-200 {
+  animation-duration: 200ms;
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+.duration-500 {
+  animation-duration: 500ms;
+}
+
+.duration-700 {
+  animation-duration: 700ms;
+}
+
+.duration-75 {
+  animation-duration: 75ms;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
+
+.delay-75 {
+  animation-delay: 75ms;
+}
+
+.ease-in {
+  animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear {
+  animation-timing-function: linear;
+}
+
+.ease-out {
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.running {
+  animation-play-state: running;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.fill-mode-backwards {
+  animation-fill-mode: backwards;
+}
+
+.fill-mode-both {
+  animation-fill-mode: both;
+}
+
+.fill-mode-forwards {
+  animation-fill-mode: forwards;
+}
+
+.fill-mode-none {
+  animation-fill-mode: none;
+}
+
+.direction-alternate {
+  animation-direction: alternate;
+}
+
+.direction-alternate-reverse {
+  animation-direction: alternate-reverse;
+}
+
+.direction-normal {
+  animation-direction: normal;
+}
+
+.direction-reverse {
+  animation-direction: reverse;
+}
+
+.repeat-0 {
+  animation-iteration-count: 0;
+}
+
+.repeat-1 {
+  animation-iteration-count: 1;
+}
+
+.repeat-infinite {
+  animation-iteration-count: infinite;
+}</style>
+  <style>
+
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-10{height:2.5rem}.min-h-\[80px\]{min-height:80px}.w-full{width:100%}.max-w-6xl{max-width:72rem}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:var(--radius)}.rounded-md{border-radius:calc(var(--radius) - 2px)}.border{border-width:1px}.border-input{border-color:hsl(var(--input))}.bg-background{background-color:hsl(var(--background))}.bg-card{background-color:hsl(var(--card))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-primary{background-color:hsl(var(--primary))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-card-foreground{color:hsl(var(--card-foreground))}.text-primary-foreground{color:hsl(var(--primary-foreground))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-offset-background{--tw-ring-offset-color:hsl(var(--background))}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-transparent::file-selector-button{background-color:transparent}.file\:text-sm::file-selector-button{font-size:0.875rem;line-height:1.25rem}.file\:font-medium::file-selector-button{font-weight:500}.file\:text-foreground::file-selector-button{color:hsl(var(--foreground))}.placeholder\:text-muted-foreground::placeholder{color:hsl(var(--muted-foreground))}.hover\:bg-primary\/90:hover{background-color:hsl(var(--primary) / 0.9)}.hover\:bg-red-600:hover{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.focus-visible\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-2:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-ring:focus-visible{--tw-ring-color:hsl(var(--ring))}.focus-visible\:ring-offset-2:focus-visible{--tw-ring-offset-width:2px}.disabled\:pointer-events-none:disabled{pointer-events:none}.disabled\:cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:opacity-50:disabled{opacity:0.5}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}.\[\&_svg\]\:pointer-events-none svg{pointer-events:none}.\[\&_svg\]\:size-4 svg{width:1rem;height:1rem}.\[\&_svg\]\:shrink-0 svg{flex-shrink:0}</style></head>
+  <body>
+    <div id="root"><div class="max-w-6xl mx-auto p-4 space-y-6"><h1 class="text-2xl font-bold text-center">Input Kolekting Harian</h1><div class="flex gap-4 flex-wrap items-end"><div><label class="block text-sm font-medium">Tanggal:</label><input type="date" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value="2025-04-26"></div><div><label class="block text-sm font-medium">Pilih Daerah:</label><select class="border p-2 rounded"><option value="Daerah 1">Daerah 1</option><option value="Daerah 2">Daerah 2</option><option value="Daerah 3">Daerah 3</option><option value="Daerah 4">Daerah 4</option><option value="Daerah 5">Daerah 5</option><option value="Daerah 6">Daerah 6</option><option value="Daerah 7">Daerah 7</option></select></div><div><label class="block text-sm font-medium">Waktu:</label><select class="border p-2 rounded"><option value="pagi">Pagi</option><option value="sore">Sore</option></select></div><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 h-10">Simpan Semua</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 h-10">Export Excel</button><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow px-4 py-2 h-10 bg-red-500 hover:bg-red-600">Hapus Semua</button></div><div class="text-right font-medium">Total: 0 liter</div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-1</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-2</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-3</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-4</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-5</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-6</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-7</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-8</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-9</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-10</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-11</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-12</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-13</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-14</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-15</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-16</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-17</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-18</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-19</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-20</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-21</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-22</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-23</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-24</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-25</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-26</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-27</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-28</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-29</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div><div class="rounded-lg border bg-card text-card-foreground shadow-sm"><div class="p-4 space-y-2"><h3 class="font-semibold text-lg">Anggota 1-30</h3><label class="block text-sm">Jumlah (liter):</label><input type="number" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""><label class="block text-sm">Catatan:</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"></textarea></div></div></div><h2 class="text-xl font-semibold mt-6">Riwayat Kolekting - Daerah 1</h2><div class="flex items-center gap-2 mb-2"><label class="text-sm font-medium">Filter tanggal:</label><input type="date" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" value=""></div><div class="overflow-x-auto"><table class="w-full text-sm border"><thead><tr class="bg-gray-100"><th class="p-2 border">Tanggal</th><th class="p-2 border">Daerah</th><th class="p-2 border">Waktu</th><th class="p-2 border">Anggota</th><th class="p-2 border">Jumlah (liter)</th><th class="p-2 border">Catatan</th></tr></thead><tbody></tbody></table></div></div></div>
+    <script type="module">
+  (async () => {
+    try {
+      const { default: UserComponent } = await import("blob:https://web-sandbox.oaiusercontent.com/0ca2c3f9-7ef9-410e-a0b6-afd9aa03484e");
+      const root = createRoot(document.getElementById("root"));
+      root.render(createElement(UserComponent));
+    } catch (error) {
+      console.error(error)
+      document.documentElement.setAttribute('data-fatal', '');
+      return
+    }
+
+    requestAnimationFrame(() => {
+      document.documentElement.setAttribute('data-ready', '');
+    })
+  })();
+</script>
+  
+</body></html>
